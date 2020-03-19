@@ -31,7 +31,7 @@ const forecast = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&un
         .then(function (jsObject){
             console.log(jsObject)
             let date = new Date().getDay();
-    var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday";]
+    var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
     const days = jsObject.list.filter(x => x.dt_txt.includes('18:00:00'));
 
