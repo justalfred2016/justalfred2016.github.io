@@ -35,7 +35,7 @@ const forecast = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&un
 
     const days = jsObject.list.filter(x => x.dt_txt.includes('18:00:00'));
 
-    for (let i = 0; i < fivedayforecast.length; i++) {
+    for (let i = 0; i < weekday.length; i++) {
         let data = document.getElementById(`data${i+1}`).innerHTML = weekday[(date + i + 1 ) % 7];
      let label= document.getElementById(`label${i+1}`).innerHTML = days[i].main.temp_max.toFixed(0) + " °F" ; 
      
