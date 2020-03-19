@@ -30,19 +30,26 @@ const forecast = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&un
     })
         .then(function (jsObject){
             console.log(jsObject)
-            let date = new Date().getDay();
-    var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday";]
+            let date = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
 
-    const days = jsObject.list.filter(x => x.dt_txt.includes('18:00:00'));
+    const fivedayforecast = jsObject.list.filter(x => x.dt_txt.includes('18:00:00'));
 
     for (let i = 0; i < fivedayforecast.length; i++) {
-        let data = document.getElementById(`data${i+1}`).innerHTML = weekday[(date + i + 1 ) % 7];
-     let label= document.getElementById(`label${i+1}`).innerHTML = days[i].main.temp_max.toFixed(0) + " °F" ; 
+        let data = document.getElementById(`data${i+1}`).innerHTML = weekday[(date.getDay() + i + 1 ) % 7];
+     let label= document.getElementById(`label${i+1}`).innerHTML = fivedayforecast[i].main.temp_max.toFixed(0) + " °F" ; 
      
 
       let icon = document.getElementById(`icon${i+1}`)
-      icon.setAttribute('src', `https://openweathermap.org/img/wn/${days[i].weather[0].icon}@2x.png`);
-      icon.setAttribute('alt', days[i].weather[0].description);
+      icon.setAttribute('src', `https://openweathermap.org/img/wn/${fivedayforecast[i].weather[0].icon}@2x.png`);
+      icon.setAttribute('alt', fivedayforecast[i].weather[0].description);
 
     }
 
