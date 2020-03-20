@@ -1,4 +1,3 @@
-
 @media only screen and (min-width: 454px){
     nav ul{display: flex;}
     nav ul li{flex: 1 1 100%;
@@ -12,15 +11,6 @@
         text-align: center;
     }
 
-
-
-
-
-.cont{
-    grid-template-columns: 1fr 1fr;
-}
-
-
 #logoImg{
     width: 100px;
     height: 50px;
@@ -28,6 +18,12 @@
     margin-top: 10%;
     
 }
+.cont{
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
 }
 
 
