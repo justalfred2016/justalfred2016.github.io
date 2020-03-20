@@ -247,11 +247,15 @@ picture{
   .articleDiv p{
       color: #c91642;
       font-size: 18px;
+      padding: 20px;
 }
 #back{
     width: 100%;
     margin: auto;
 }
 .bold {
+    width: 100%;
+}
+.imageDiv{
     width: 100%;
 }

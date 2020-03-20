@@ -1,4 +1,4 @@
-const requestURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=47c4e1b3676af835b875196a9383c9fd'
+const requestURL = 'https://api.openweathermap.org/data/2.5/weather?id=5609169&units=imperial&APPID=47c4e1b3676af835b875196a9383c9fd'
 fetch(requestURL)
     .then(function(response) {
         return response.json();
@@ -22,7 +22,7 @@ fetch(requestURL)
           document.getElementById("chill").innerHTML = "N/A";
         }
     })
-const forecast = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=47c4e1b3676af835b875196a9383c9fd';
+const forecast = 'https://api.openweathermap.org/data/2.5/forecast?id=5609169&units=imperial&APPID=47c4e1b3676af835b875196a9383c9fd';
 
     fetch(forecast)
     .then(function(response){

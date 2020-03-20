@@ -36,6 +36,7 @@
  main, footer{
      width: 960px;
      margin: auto;
+     box-shadow: 1px 1px 1px 2px whitesmoke;
  }
 .sec2{
     display: block;
@@ -44,10 +45,11 @@
 .map{
     width: 350px;
 }
-.sec4{
+.sec4, .sec3{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 10%;
+    padding-top: 20px;
 }
 .sec1{
     width: 100%;
@@ -58,6 +60,10 @@
 picture{
     width: 100%;
     margin: auto;
+}
+.lightning{
+     width: 100%;
+     box-shadow: 2px 2px 2p 2px blue;
 }
 
 
