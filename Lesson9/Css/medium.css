@@ -60,9 +60,7 @@ border: blue solid 1px;
 }
 .socials {
     display: grid;
-    background-color: blue;
-    position: fixed;
-   
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
 }
 
 }
