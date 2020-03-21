@@ -244,11 +244,17 @@ picture{
       text-align: center;
 
   }
-  .articleDiv p{
-      color: #c91642;
+  .articleDiv p, .articleDiv h2, .articleDiv h3{
+      color: black;
       font-size: 18px;
-      padding: 20px;
-}
+      padding: 10px;
+      margin-top: 0px;
+      margin-bottom: 0;
+    }
+    .articleDiv h2, .articleDiv h3{
+        text-align: left;
+    }
+
 #back{
     width: 100%;
     margin: auto;
@@ -258,4 +264,11 @@ picture{
 }
 .imageDiv{
     width: 100%;
+}
+.italics{
+    font-style: italic;
+}
+article{
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
