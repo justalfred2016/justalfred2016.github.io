@@ -5,6 +5,7 @@ fetch(requestURL)
         return response.json();
     })
     .then(function(jsonObject) {
+        console.log(jsonObject)
         const towns = jsonObject['towns'];
         for (let i = 0; i < towns.length; i++) {
             if (towns[i].name == "Preston" || "Soda Springs"||"Fish Haven"){
@@ -18,7 +19,7 @@ fetch(requestURL)
             let avrain = document.createElement('p');
 
             birth.textContent = "Year Founded:" + " " + towns[i].yearFounded;
-            currentpopulation.textContent = "Population:" + " " + towns[i].currentpopulation;
+            currentpopulation.textContent = "Population:" + " " + towns[i].currentPopulation;
             avrain.textContent = "Annual Rainfall:" + " " + towns[i].averageRainfall;
 
 

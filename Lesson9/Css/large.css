@@ -21,7 +21,7 @@
     }
     main,
     footer {
-        width: 1350px;
+        width: 1070px;
         margin: auto;
     }
     iframe {
@@ -55,7 +55,7 @@
 
    
     .socials {
-     box-shadow: blue 2px 2px 5px;
+     box-shadow:grey 1px 1px 1px;
   
     }
     .addition {
