@@ -22,32 +22,17 @@ fetch(requestURL)
           document.getElementById("chill").innerHTML = "N/A";
         }
     })
-const forecast = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=47c4e1b3676af835b875196a9383c9fd';
 
-    fetch(forecast)
-    .then(function(response){
-        return response.json()
+    const requestURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=47c4e1b3676af835b875196a9383c9fd'
+fetch(requestURL)
+    .then(function(response) {
+        return response.json();
     })
-        .then(function (jsObject){
-            console.log(jsObject)
-            let date = new Date().getDay();
-    var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    .then(function(jsObject) {
+        console.log(jsObject);
 
-    const days = jsObject.list.filter(x => x.dt_txt.includes('18:00:00'));
+    })
 
-    for (let i = 0; i < weekday.length; i++) {
-        let data = document.getElementById(`data${i+1}`).innerHTML = weekday[(date + i + 1 ) % 7];
-     let label= document.getElementById(`label${i+1}`).innerHTML = days[i].main.temp_max.toFixed(0) + " °F" ; 
-     
-
-      let icon = document.getElementById(`icon${i+1}`)
-      icon.setAttribute('src', `https://openweathermap.org/img/wn/${days[i].weather[0].icon}@2x.png`);
-      icon.setAttribute('alt', days[i].weather[0].description);
-
-    }
-
-        
-    });
                 
               
          
