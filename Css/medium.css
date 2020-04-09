@@ -1,14 +1,70 @@
 @media only screen and (min-width: 454px){
     
-    nav ul{display: flex;}
-    nav ul li{flex: 1 1 100%;
+    nav{
+        display: grid;
+        grid-template-columns:60% 35%;
     }
-    .navigation li:first-child{
+    nav {
+        border: #a30000 2px solid;
+        margin: 0;
+        width: 100%;
+        border-radius: 20px 20px;
+    }
+    
+    nav li a {
+        display: block;
+        text-decoration: none;
+        color: #9662c4;
+        padding: 20px;
+    }
+    
+    a:hover:not(.active) {
+        text-decoration: underline;
+        border-radius: 20px 20px;
+    }
+    
+    nav li a.active {
+        color: #0c3d67;
+        border-radius: 20px 20px;
+    }
+    
+    .navigation {
+        list-style: none;
+        padding: 0;
+        font-family: "Neucha";
+        text-align: left;
+        margin: 0;
+        font-size: 25px;
+    }
+    
+    nav li:first-child {
+        display: block;
+    }
+    
+    nav li {
         display: none;
     }
-    .navigation li{
+    
+    .responsive li {
         display: block;
-        flex: 1 1 100%;
-        text-align: center;
     }
+    .logoDesign{
+    width: 90%;
+    }
+    .content{
+        display: grid;
+        grid-template-columns:  1fr;
+    }
+    .contentdata, .cont{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+    }
+    
+   
+    
+    
+  
+    
+    
 }
